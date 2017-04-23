@@ -32,7 +32,7 @@ $ docker run -it --rm \
  postgres:9.6-alpine psql -h postgres -d adempiere -U adempiere -f /ExpDat.dmp
 ```
 
-### Start PHP PG admin (OPTIONAL)
+### Start phpPgAdmin (OPTIONAL)
 ```shell
 $ docker run -d --name=my-phpPgAdmin \
  -v /etc/localtime:/etc/localtime \
@@ -41,4 +41,4 @@ $ docker run -d --name=my-phpPgAdmin \
  --link my-postgres:postgres \
  zhajor/docker-phppgadmin:latest
 ```
-PHP PG Admin can be access at [http://localhost:88/](http://localhost:88/)
+phpPgAdmin can be access at [http://localhost:88/](http://localhost:88/)
