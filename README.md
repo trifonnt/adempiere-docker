@@ -40,3 +40,4 @@ $ docker run -d --name=my-phpPgAdmin \
  --link my-postgres:postgres \
  zhajor/docker-phppgadmin:latest
 ```
+PHP PG Admin can be access at [http://localhost:88/](http://localhost:88/)
