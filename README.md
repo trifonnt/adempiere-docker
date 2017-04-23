@@ -27,8 +27,9 @@ $ unzip Adempiere_pg.jar
 
 $ docker run -it --rm \
  --link my-postgres:postgres \
+ -e PGPASSWORD=adempiere \
  -v "$(pwd)/Adempiere_pg.dmp:/ExpDat.dmp" \
- postgres:9.6-alpine psql -h postgres -U postgres
+ postgres:9.6-alpine psql -h postgres -d adempiere -U adempiere -f /ExpDat.dmp
 ```
 
 ### Start PHP PG admin (OPTIONAL)
