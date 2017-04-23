@@ -4,7 +4,7 @@
 $ docker build -t postgres-adempiere:9.6-alpine -f ./postgres-adempiere.df .
 ```
 
-# Run newly build image
+# Run newly built image
 ```shell
 $ docker run -d --name my-postgres \
  -v /etc/localtime:/etc/localtime \
