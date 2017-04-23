@@ -20,14 +20,14 @@ $ docker run -d --name my-postgres \
  postgres-adempiere:9.6-alpine
 ```
 
-### Import DB dump into Postgres server
+### Import ADempiere DB dump into Postgres server
 ```shell
 $ wget https://raw.githubusercontent.com/adempiere/adempiere/develop/data/seed/Adempiere_pg.jar
 $ unzip Adempiere_pg.jar
 
 $ docker run -it --rm \
  --link my-postgres:postgres \
- -v "$(pwd)/pgdata:/ExpDat.dmp" \
+ -v "$(pwd)/Adempiere_pg.dmp:/ExpDat.dmp" \
  postgres:9.6-alpine psql -h postgres -U postgres
 ```
 
