@@ -1,0 +1,12 @@
+FROM postgres:9.6-alpine
+
+COPY *.sql /docker-entrypoint-initdb.d/
+COPY *.sh  /docker-entrypoint-initdb.d/
+
+RUN chmod a+r /docker-entrypoint-initdb.d/*
+
+## Commented for now!!!
+## Introduce Environment variable.
+## Depending on the value of ADEMPIERE_IS_IMPORT_DB then execute below command
+# COPY ./ExpDat.dmp /ExpDat.dmp
+
