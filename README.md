@@ -14,9 +14,14 @@ $ docker run -d --name my-postgres \
  postgres-adempiere:9.6-alpine
 ```
 
+### Import DB dump into Postgres server
+```shell
+$ docker run -it --rm --link my-postgres:postgres postgres:9.6-alpine psql -h postgres -U postgres
+```
+
 ### Start PHP PG admin (OPTIONAL)
 ```shell
-$ docker run -d --name=my-phpGgAdmin \
+$ docker run -d --name=my-phpPgAdmin \
  -v /etc/localtime:/etc/localtime \
  -e "DB_HOST=postgres" -e "DB_PORT=5432" \
  -p 88:80 \
