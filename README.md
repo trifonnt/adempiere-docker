@@ -16,7 +16,13 @@ $ docker run -d --name my-postgres \
 
 ### Import DB dump into Postgres server
 ```shell
-$ docker run -it --rm --link my-postgres:postgres postgres:9.6-alpine psql -h postgres -U postgres
+$ wget https://raw.githubusercontent.com/adempiere/adempiere/develop/data/seed/Adempiere_pg.jar
+$ unzip Adempiere_pg.jar
+
+$ docker run -it --rm \
+ --link my-postgres:postgres \
+ -v "$(pwd)/pgdata:/ExpDat.dmp" \
+ postgres:9.6-alpine psql -h postgres -U postgres
 ```
 
 ### Start PHP PG admin (OPTIONAL)
