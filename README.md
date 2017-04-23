@@ -4,6 +4,12 @@ Collection of Docker files for running ADempiere ERP-CRM on Docker
 
 ## Steps
 
+### Clone this repository
+```shell
+$ git clone https://github.com/trifonnt/adempiere-docker.git
+$ cd adempiere-docker
+```
+
 ### Start PostregSQL DB server
 ```shell
 $ docker run -d --name my-postgres \
