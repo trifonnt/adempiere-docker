@@ -11,12 +11,12 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
   GRANT ALL PRIVILEGES ON DATABASE adempiere TO adempiere;
 EOSQL
 
-# Check if ExpDat.dmp file exist then import it!
+# Check if /ExpDat.dmp file exist then import it!
 file_name="/ExpDat.dmp"
 if [ -f "$file_name" ]
 then
-	echo "$file_name found. Will import DB dump!!!"
+  echo "$file_name found. Will import DB dump!!!"
   psql -d adempiere --username adempiere -f /ExpDat.dmp
 else
-	echo "$file_name not found."
+  echo "$file_name not found."
 fi
