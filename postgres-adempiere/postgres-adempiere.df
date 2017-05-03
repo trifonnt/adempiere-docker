@@ -7,6 +7,6 @@ RUN chmod a+r /docker-entrypoint-initdb.d/*
 
 ## Commented for now!!!
 ## Introduce Environment variable.
-## Depending on the value of ADEMPIERE_IS_IMPORT_DB then execute below command
+## Depending on the value of ADEMPIERE_IMPORT_DB_ON_START then execute below command
 # COPY ./ExpDat.dmp /ExpDat.dmp
 
