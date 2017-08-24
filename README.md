@@ -10,7 +10,7 @@ $ git clone https://github.com/trifonnt/adempiere-docker.git
 $ cd adempiere-docker
 ```
 
-### Start PostregSQL DB server in Docker container
+### Start PostgreSQL DB server in Docker container
 ```shell
 $ docker run -d --name my-postgres \
  -v /etc/localtime:/etc/localtime \
