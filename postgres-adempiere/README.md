@@ -1,3 +1,8 @@
+### Clone this repository
+```shell
+$ git clone https://github.com/trifonnt/adempiere-docker.git
+$ cd adempiere-docker/postgres-adempiere
+```
 
 # Build postgres-adempiere image
 ```shell
