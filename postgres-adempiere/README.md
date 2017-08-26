@@ -6,7 +6,7 @@ $ docker build -t postgres-adempiere:9.6-alpine -f ./postgres-adempiere.df .
 
 # Run newly built image
 ```shell
-$ docker run -d --name my-postgres \
+$ docker run -d --name my-adempiere-postgres \
  -v /etc/localtime:/etc/localtime \
  -v "$(pwd)/pgdata:/var/lib/postgresql/data" \
  -e POSTGRES_PASSWORD=adempiere \
