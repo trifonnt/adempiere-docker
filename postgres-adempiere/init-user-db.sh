@@ -16,7 +16,7 @@ file_name="/ExpDat.dmp"
 if [ -f "$file_name" ]
 then
   echo "$file_name found. Will import DB dump!!!"
-  psql -d adempiere --username adempiere -f /ExpDat.dmp
+  psql -d adempiere --username adempiere -f $file_name
 else
-  echo "$file_name not found."
+  echo "$file_name not found. Will NOT import DB dump."
 fi
